@@ -1,7 +1,7 @@
 /* Main menus */
 body {
   background-color: #0a3f75;
-  font-family: verdana, sans-serif;
+  font-family: 'Righteous', cursive;
   color: white;
 }
 
@@ -12,10 +12,19 @@ body {
 
 .header {
   margin-top: 250px;
+  text-align: center;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  color:orange;
+  font-size:30px;
+}
+
+.header span {
+  background-color: #ffffff;
 }
 
 .menu {
-  margin-top: 50px;
+  font-size: 20px;
 }
 
 a:link {
