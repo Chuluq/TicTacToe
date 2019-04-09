@@ -29,12 +29,14 @@ function startGame() {
 function turnClick(square) {
 	if (typeof origBoard[square.target.id] == 'number') {
 		if (!checkWin(origBoard, oPlayer) && !checkWin(origBoard, xPlayer) && !checkTie()) {
-			if (currentPlayer == 0) {
-			turn(square.target.id, oPlayer)
-			currentPlayer = 1;
-			} else {
+			if (currentPlayer == 0) {				
+				turn(square.target.id, oPlayer)
+				currentPlayer = 1;
+				alert("turn of X Player");
+			} else {				
 				turn(square.target.id, xPlayer)
 				currentPlayer = 0;
+				alert("turn of O Player");
 			}
 		}
 	}
@@ -44,7 +46,9 @@ function turn(squareId, player) {
 	origBoard[squareId] = player;
 	document.getElementById(squareId).innerText = player;
 	let gameWon = checkWin(origBoard, player)
+	let gameTie = checkTie()
 	if (gameWon) gameOver(gameWon)
+	else gameTie
 }
 
 function checkWin(board, player) {
@@ -63,7 +67,7 @@ function checkWin(board, player) {
 function gameOver(gameWon) {
 	for (let index of winCombos[gameWon.index]) {
 		document.getElementById(index).style.backgroundColor =
-			gameWon.player == oPlayer ? "#00bfff" : "red";
+			gameWon.player == oPlayer ? "#003049" : "red";
 	}
 	for (var i = 0; i < cells.length; i++) {
 		cells[i].removeEventListener('click', turnClick, false);
