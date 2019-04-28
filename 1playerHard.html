@@ -8,10 +8,9 @@
         <!-- <link rel="stylesheet" type="text/css" href="css/index.css"> -->
         <link rel="stylesheet" type="text/css" href="css/style.css">
         <title>1 Player Hard</title>
+        <audio id="play" src="music/button.mp3"></audio>
     </head>
-    <body>
-        <!-- Audio -->
-        <embed src="music/bsound.mp3" loop="true" hidden="true" autostart="true">
+    <body onclick="playSound()">
         <table>
             <tr>
                 <td class="cell" id="0"></td>
@@ -35,9 +34,15 @@
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="option.html" id="active">1 Player</a></li>
-                    <li><a href="2player.html">2 Player</a></li>
+                    <li><a href="2player.html">2 Players</a></li>
+                    <li><a href="about.html">About</a></li>
                 </ul>  
             </div>
+        </div>
+
+        <!-- back button -->
+        <div class="back">
+            <a href="option.html"><img src="img/back.png" alt="Back" width="25%" height="25%"></a>
         </div>
 
         <div class="endgame">
