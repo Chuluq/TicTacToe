@@ -32,11 +32,9 @@ function turnClick(square) {
 			if (currentPlayer == 0) {				
 				turn(square.target.id, oPlayer)
 				currentPlayer = 1;
-				alert("turn of X Player");
 			} else {				
 				turn(square.target.id, xPlayer)
 				currentPlayer = 0;
-				alert("turn of O Player");
 			}
 		}
 	}
@@ -94,4 +92,8 @@ function checkTie() {
 		return true;
 	}
 	return false;
+}
+
+function playSound(){
+	document.getElementById('play').play();
 }
