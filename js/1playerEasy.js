@@ -87,3 +87,7 @@ function checkTie() {
 	}
 	return false;
 }
+
+function playSound(){
+	document.getElementById('play').play();
+}
