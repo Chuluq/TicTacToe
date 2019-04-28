@@ -1,8 +1,12 @@
 /* Main menus */
+
 body {
   background-color: #0a3f75;
-  font-family: 'Righteous', cursive;
+  font-family: 'Russo One', sans-serif;
   color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .container {
@@ -11,7 +15,7 @@ body {
 }
 
 .header {
-  margin-top: 250px;
+  margin-top: 70%;
   text-align: center;
   -webkit-transition: 0.5s;
   transition: 0.5s;
@@ -20,11 +24,19 @@ body {
 }
 
 .header span {
-  background-color: #ffffff;
+  background-color: white;
 }
 
 .menu {
   font-size: 20px;
+}
+
+img {
+  padding-top: 20%;
+}
+
+a {
+  text-align: center;
 }
 
 a:link {
@@ -49,6 +61,50 @@ a:active {
   color: yellow;
   background-color: transparent;
   text-decoration: underline;
+}
+
+#wrap {
+  overflow:hidden;
+  position:relative; 
+}
+
+#nav {
+  float:left;
+  position:relative;
+  left: 50%;
+}
+
+#nav ul {
+  float: left;
+  position: relative;
+  left: -50%;
+  list-style-type: none;
+  margin: 15px;
+  padding: 0;
+  overflow: hidden;
+  background-color: #E6EFE9;
+}
+
+#nav li {
+  float: left;
+}
+
+#nav li a {
+  float: left;
+  font-size: 18px;
+  display: inline-block;
+  color: #0a3f75;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: gold;
+}
+
+#active {
+  background-color: #a0b4ff;
 }
 
 /* Gameplay */
@@ -103,4 +159,12 @@ table tr td:last-child {
   border-radius: 5px;
   color: white;
   font-size: 2em;
+}
+
+/* back button */
+.back {
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  align-items: center; 
 }
