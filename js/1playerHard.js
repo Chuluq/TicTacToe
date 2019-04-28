@@ -138,3 +138,6 @@ function minimax(newBoard, player) {
 
 	return moves[bestMove];
 }
+function playSound(){
+	document.getElementById('play').play();
+}
